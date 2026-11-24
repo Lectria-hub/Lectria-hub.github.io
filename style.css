@@ -184,7 +184,10 @@ article a.dissertation-button:hover { background: #352582; color: #fff; text-dec
 .skill-card li { padding: .18rem .7rem; background: #f1eef8; border: 1px solid #e0daed; border-radius: 2rem; color: #494069; font-size: .88rem; }
 .skill-context { color: var(--muted); font-size: .9rem; margin: -.3rem 0 .8rem; }
 .detail { padding-block: clamp(3rem, 6vw, 5rem); }
-.detail h1 { max-width: 21ch; font-size: clamp(3rem, 5vw, 4.9rem); line-height: 1.04; margin: .6rem 0 1.25rem; }
+.detail h1 { font-size: clamp(2.35rem, 5vw, 4.4rem); line-height: 1.08; text-wrap: balance; margin: .6rem 0 1.25rem; }
+@media (min-width: 741px) {
+  .detail h1 .title-line { display: block; }
+}
 .detail-lead { max-width: 58ch; font: 1.45rem/1.5 var(--serif); }
 .detail-layout { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: 7%; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
 .detail-story section + section { margin-top: 2rem; }
