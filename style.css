@@ -42,6 +42,16 @@ h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: -.035em; margin: .35
 article + article { margin-top: 1.7rem; padding-top: 1.7rem; border-top: 1px solid var(--rule); }
 article a { display: inline-block; margin-top: .65rem; font-size: .9rem; font-weight: 600; }
 .email { font: 1.55rem var(--serif); }
+#education h4 { margin: .85rem 0 .15rem; font-size: .9rem; font-weight: 600; }
+.modules { margin: 0; padding-left: 1.15rem; font-size: .95rem; color: var(--muted); }
+.modules li::marker { color: #827ca2; }
+.addresses { display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1rem; align-items: baseline; margin: 0 0 .8rem; }
+.addresses dt { color: var(--muted); font-size: .9rem; }
+.addresses dd { margin: 0; }
+@media (max-width: 420px) {
+  .addresses { column-gap: .65rem; }
+  .email { font-size: 1.25rem; }
+}
 #contact p { margin-top: .4rem; }
 footer { justify-content: space-between; border-top: 1px solid var(--rule); padding-block: 1rem 2rem; color: var(--muted); font-size: .82rem; }
 @media (max-width: 740px) {
@@ -51,4 +61,34 @@ footer { justify-content: space-between; border-top: 1px solid var(--rule); padd
   .bar { flex-wrap: wrap; gap: .5rem 1rem; padding-block: .8rem; }
   nav { font-size: .86rem; }
   .section { padding-block: 2.3rem; gap: 1.5rem; }
+}
+.directory { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; padding-bottom: 3rem; }
+.directory a { padding: 1rem 0; border-top: 2px solid #aca6c7; text-decoration: none; }
+.directory strong { display: block; font: 1.6rem var(--serif); }
+.directory a:hover strong { text-decoration: underline; }
+.directory span { display: block; margin-top: .45rem; color: var(--muted); font-size: .9rem; max-width: 30ch; }
+.section { display: block; padding-block: clamp(2rem, 5vw, 4rem); border: 0; }
+.section > h2 { margin-bottom: 1.7rem; }
+#education .entries, #research .entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.entries article, .sample { padding: clamp(1.25rem, 3vw, 2rem); margin: 0; border: 1px solid var(--rule); background: #fff; }
+#education article { border-top: 3px solid #8980ae; }
+.sample { max-width: 45rem; }
+.section:target { scroll-margin-top: 90px; }
+@supports selector(body:has(.section:target)) {
+  .section:not(:target) { display: none; }
+  body:has(.section:target) :is(.intro, .directory) { display: none; }
+  body:has(#education:target) nav a[href="#education"],
+  body:has(#research:target) nav a[href="#research"],
+  body:has(#writing:target) nav a[href="#writing"],
+  body:has(#contact:target) nav a[href="#contact"] { text-decoration: underline; text-decoration-thickness: 2px; }
+}
+@media (max-width: 740px) {
+  .directory, #education .entries, #research .entries { grid-template-columns: 1fr; }
+  .directory { gap: .2rem; }
+  .directory span { max-width: none; }
+  nav { flex-wrap: wrap; gap: .3rem 1rem; }
+}
+@media print {
+  body .section:not(:target), body:has(.section:target) .intro { display: block; }
+  .bar, .directory, footer { display: none; }
 }
