@@ -62,33 +62,84 @@ footer { justify-content: space-between; border-top: 1px solid var(--rule); padd
   nav { font-size: .86rem; }
   .section { padding-block: 2.3rem; gap: 1.5rem; }
 }
-.directory { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; padding-bottom: 3rem; }
-.directory a { padding: 1rem 0; border-top: 2px solid #aca6c7; text-decoration: none; }
-.directory strong { display: block; font: 1.6rem var(--serif); }
-.directory a:hover strong { text-decoration: underline; }
-.directory span { display: block; margin-top: .45rem; color: var(--muted); font-size: .9rem; max-width: 30ch; }
 .section { display: block; padding-block: clamp(2rem, 5vw, 4rem); border: 0; }
 .section > h2 { margin-bottom: 1.7rem; }
-#education .entries, #research .entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+#education .entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .entries article, .sample { padding: clamp(1.25rem, 3vw, 2rem); margin: 0; border: 1px solid var(--rule); background: #fff; }
 #education article { border-top: 3px solid #8980ae; }
 .sample { max-width: 45rem; }
+.projects, .writing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.project, .writing-grid .sample {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: clamp(1.2rem, 2vw, 1.75rem);
+  border: 1px solid #dedbe8;
+  border-radius: 12px;
+  background: #fff;
+}
+.project h3, .sample h3 { margin: .6rem 0 .7rem; font-size: clamp(1.5rem, 2vw, 1.9rem); line-height: 1.16; }
+.project p:not(.meta), .sample p:not(.meta) { font-size: .97rem; line-height: 1.55; }
+.project > a, .sample > a { margin-top: auto; }
+.project > p:last-of-type, .sample > p:last-of-type { margin-bottom: .9rem; }
+.project.receptor { grid-row: span 2; background: #34335f; border-color: #34335f; color: white; }
+.receptor p.meta { color: #d9d3ff; }
+.receptor p:not(.meta) { color: #eeedf7; }
+.receptor h3 { font-size: clamp(2rem, 3vw, 3rem); }
+.receptor-figure { margin-top: auto; width: 100%; }
+.receptor-figure img { display: block; width: 100%; height: 205px; object-fit: contain; filter: grayscale(1) invert(1) brightness(1.6); mix-blend-mode: screen; }
+.receptor-figure a { font-size: .75rem; color: #eeeaff; font-weight: 400; }
+.project.compounds { background: #eef2f9; }
+.project.kidney, .writing-grid .sample { background: #f0edf9; }
+.dissertation-button, article a.dissertation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .3rem .65rem;
+  min-height: 46px;
+  padding: .67rem 1rem;
+  border-radius: 7px;
+  background: #4c38aa;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+}
+#education .dissertation-button { margin-top: 1.2rem; }
+article a.dissertation-button:hover { background: #352582; color: #fff; text-decoration: none; }
+.dissertation-button small { font-size: .73rem; font-weight: 500; letter-spacing: .05em; }
+.writing-grid .sample { border-top: 4px solid #6454aa; }
+@media (max-width: 850px) {
+  .projects, .writing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 540px) {
+  .projects, .writing-grid { grid-template-columns: 1fr; }
+  .project.receptor { grid-row: auto; }
+  .receptor-figure img { height: 145px; }
+}
 .section:target { scroll-margin-top: 90px; }
 @supports selector(body:has(.section:target)) {
   .section:not(:target) { display: none; }
-  body:has(.section:target) :is(.intro, .directory) { display: none; }
+  body:not(:has(.section:target)) #research { display: block; border-top: 1px solid var(--rule); }
+  body:has(.section:target) .intro { display: none; }
   body:has(#education:target) nav a[href="#education"],
   body:has(#research:target) nav a[href="#research"],
   body:has(#writing:target) nav a[href="#writing"],
   body:has(#contact:target) nav a[href="#contact"] { text-decoration: underline; text-decoration-thickness: 2px; }
 }
 @media (max-width: 740px) {
-  .directory, #education .entries, #research .entries { grid-template-columns: 1fr; }
-  .directory { gap: .2rem; }
-  .directory span { max-width: none; }
+  #education .entries { grid-template-columns: 1fr; }
   nav { flex-wrap: wrap; gap: .3rem 1rem; }
 }
 @media print {
   body .section:not(:target), body:has(.section:target) .intro { display: block; }
-  .bar, .directory, footer { display: none; }
+  .bar, footer { display: none; }
 }
