@@ -87,6 +87,8 @@ footer { justify-content: space-between; border-top: 1px solid var(--rule); padd
 .project h3, .sample h3 { margin: .6rem 0 .7rem; font-size: clamp(1.5rem, 2vw, 1.9rem); line-height: 1.16; }
 .project p:not(.meta), .sample p:not(.meta) { font-size: .97rem; line-height: 1.55; }
 .project > a, .sample > a { margin-top: auto; }
+.project-links { display: grid; gap: .35rem; margin-top: auto; }
+.project-links a { margin-top: 0; }
 .project > p:last-of-type, .sample > p:last-of-type { margin-bottom: .9rem; }
 .project.receptor { grid-row: span 2; background: #34335f; border-color: #34335f; color: white; }
 .receptor p.meta { color: #d9d3ff; }
