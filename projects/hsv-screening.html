@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HSV-1 DNA polymerase · Yanbing Chen</title>
-  <meta name="description" content="Selecting a chemically diverse set of small molecules from about nine million compound records.">
-  <link rel="stylesheet" href="../style.css?v=project-pages-1">
+  <title>Virtual screening for HSV-1 DNA polymerase inhibitors · Yanbing Chen</title>
+  <meta name="description" content="Screened small molecules for the Shanghai International Computational Biology Challenge and assembled a chemically diverse shortlist of putative HSV-1 DNA polymerase inhibitors.">
+  <link rel="stylesheet" href="../style.css?v=research-figures-1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="bar wrap"><a class="signature" href="../index.html#profile">Lectria Chen</a><a href="../index.html#research">← Research Projects</a></div></header>
   <main class="wrap detail" id="main">
     <p class="meta">Virtual screening</p>
-    <h1>HSV-1 DNA polymerase</h1>
-    <p class="detail-lead">Selecting a chemically diverse set of small molecules from about nine million compound records.</p>
+    <h1>Virtual screening for HSV-1 DNA polymerase inhibitors</h1>
+    <p class="detail-lead">Screened small molecules for the Shanghai International Computational Biology Challenge and assembled a chemically diverse shortlist of putative HSV-1 DNA polymerase inhibitors.</p>
     <div class="detail-layout">
       <div class="detail-story">
-        <section><h2>From records to candidates</h2><p>I standardised and deduplicated compound structures before screening. I used substructure searches, molecular fingerprints and scaffold comparisons to retrieve candidates, and trained five XGBoost models on fingerprints and molecular descriptors.</p></section>
-        <section><h2>Choosing the final set</h2><p>I compared docking results across six polymerase structures and considered solubility, ligand efficiency and scaffold diversity. From a shortlist of 1,600 candidates I selected 100 compounds for submission to the Shanghai International Computational Biology Challenge.</p></section>
+        <figure class="project-result"><a href="../figures/screening-hits.webp" aria-label="Open full-size project figure"><img src="../figures/screening-hits.webp" alt="Structures of the top three compounds in the submitted shortlist"></a><figcaption>The first three molecules in the final 100-compound submission, drawn from the submitted SMILES. Rank reflects computational selection; inhibitory activity was not measured in this screen.</figcaption></figure>
+        <section><h2>Library screening</h2><p>Standardised compound structures and removed duplicates. Substructure searches, molecular fingerprints and scaffold comparisons identified candidates for scoring with five XGBoost models.</p></section>
+        <section><h2>Candidate selection</h2><p>Compared docking poses across six polymerase structures. Ligand efficiency, solubility and scaffold diversity informed the final selection of 100 compounds from a shortlist of 1,600.</p></section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>100 submitted candidates</dd><dt>Research area</dt><dd>Small-molecule screening</dd></dl>

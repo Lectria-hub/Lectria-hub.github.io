@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f8f7fc">
   <meta name="description" content="Yanbing (Lectria) Chen, MRes student in Drug Design at UCL. Selected work in protein design, virtual screening and biomedical data analysis.">
   <title>Yanbing (Lectria) Chen · Research</title>
-  <link rel="stylesheet" href="style.css?v=project-pages-1">
+  <link rel="stylesheet" href="style.css?v=research-figures-1">
   <script defer src="navigation.js"></script>
 </head>
 <body id="top">
@@ -28,8 +28,8 @@
         <div class="links"><a href="https://github.com/Lectria-hub">GitHub ↗</a><a href="https://www.linkedin.com/in/yanbing-chen-210b922b4/">LinkedIn ↗</a></div>
       </div>
       <figure>
-        <div class="plate"><img src="nk2r.jpg" alt="Ribbon representation of the neurokinin 2 receptor complex bound to neurokinin A."></div>
-        <figcaption><span>Neurokinin 2 receptor complex</span><a href="https://www.rcsb.org/structure/7XWO">RCSB PDB · 7XWO ↗</a></figcaption>
+        <div class="plate design-plate"><img src="figures/nk2r-design.webp" alt="Predicted complex of designed nanobody R27_09 and NK2R"></div>
+        <figcaption><span>R27_09 bound to NK2R · predicted model</span><a href="projects/nk2r.html">View project →</a></figcaption>
       </figure>
     </section>
     <section class="section" id="education" aria-labelledby="edu-title">
@@ -67,31 +67,36 @@
       <div class="projects">
         <article class="project receptor">
           <p class="meta">Protein design</p>
-          <h3><a class="project-open" href="projects/nk2r.html">Nanobodies for NK2R <span aria-hidden="true">→</span></a></h3>
-          <p>I design nanobodies for the neurokinin 2 receptor and compare their predicted contacts across models. I also check whether receptor glycans leave the binding site accessible.</p>
-          <figure class="receptor-figure"><img src="nk2r.jpg" alt="Experimental reference structure of the NK2R complex"><figcaption><a href="https://www.rcsb.org/structure/7XWO">Reference structure · PDB 7XWO ↗</a></figcaption></figure>
+          <h3><a class="project-open" href="projects/nk2r.html">NK2R nanobody design <span aria-hidden="true">→</span></a></h3>
+          <p>Designed single-domain antibodies for NK2R and compared predicted binding poses across receptor configurations.</p>
+          <div class="project-image"><img loading="lazy" src="figures/nk2r-design.webp" alt="Predicted NK2R–nanobody complex"></div>
+
         </article>
         <article class="project metals">
           <p class="meta">Structure curation</p>
-          <h3><a class="project-open" href="projects/metal-sites.html">Metal sites in proteins <span aria-hidden="true">→</span></a></h3>
-          <p>I curated seven complexes for our AtomFlow team, checking ligand charges and identifying the atoms that coordinate each metal.</p>
+          <h3><a class="project-open" href="projects/metal-sites.html">Metal–protein complex curation for AtomFlow <span aria-hidden="true">→</span></a></h3>
+          <p>Curated seven metal-containing structures, reconciled ligand charges and recorded the atoms coordinating each metal.</p>
+          <div class="project-image"><img loading="lazy" src="figures/haem-site.webp" alt="Haem cofactor and central iron in PDB 1CYO"></div>
         </article>
         <article class="project compounds">
           <p class="meta">Virtual screening</p>
-          <h3><a class="project-open" href="projects/hsv-screening.html">HSV-1 DNA polymerase <span aria-hidden="true">→</span></a></h3>
-          <p>I screened about nine million compound records and selected 100 candidates using docking poses and scaffold diversity.</p>
+          <h3><a class="project-open" href="projects/hsv-screening.html">Virtual screening for HSV-1 DNA polymerase inhibitors <span aria-hidden="true">→</span></a></h3>
+          <p>Built a screening workflow for about nine million compound records and selected 100 candidates using docking, solubility and scaffold diversity.</p>
+          <div class="project-image"><img loading="lazy" src="figures/screening-first.webp" alt="Highest-ranked compound in the final submission"></div>
           <a href="https://github.com/Lectria-hub/hsv-polymerase-screening">Screening code ↗</a>
         </article>
         <article class="project kidney">
           <p class="meta">Target prioritisation</p>
-          <h3><a class="project-open" href="projects/kidney-targets.html">Rare kidney diseases <span aria-hidden="true">→</span></a></h3>
-          <p>I compared ten disease-associated proteins and prioritised five for small-molecule research.</p>
+          <h3><a class="project-open" href="projects/kidney-targets.html">Complement target prioritisation in rare kidney disease <span aria-hidden="true">→</span></a></h3>
+          <p>Compared structural, bioactivity and scaffold evidence across five complement proteins. Factors D and B ranked highest for small-molecule tractability.</p>
+          <div class="project-image"><img loading="lazy" src="figures/factor-d.webp" alt="J6T in the S1 pocket of complement factor D"></div>
           <a class="dissertation-button" href="bsc-dissertation.pdf">Read my dissertation <small>PDF ↗</small></a>
         </article>
         <article class="project signals">
           <p class="meta">Clinical data</p>
-          <h3><a class="project-open" href="projects/blood-oxygen.html">Blood oxygen patterns <span aria-hidden="true">→</span></a></h3>
-          <p>I analysed oxygen saturation recordings from 200 patients with cirrhosis to test whether signal irregularity was associated with prognosis.</p>
+          <h3><a class="project-open" href="projects/blood-oxygen.html">Multiscale oxygen saturation entropy in cirrhosis <span aria-hidden="true">→</span></a></h3>
+          <p>Developed MATLAB workflows to analyse 20-minute ICU oxygen saturation recordings and compare signal irregularity across time scales.</p>
+          <div class="project-image"><img loading="lazy" src="figures/entropy-scales.webp" alt="Patient-level oxygen saturation entropy across five time scales"></div>
           <a href="https://github.com/Lectria-hub/network-physiology-summer-project">Analysis code ↗</a>
         </article>
       </div>

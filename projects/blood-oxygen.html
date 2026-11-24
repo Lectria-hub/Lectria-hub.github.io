@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blood oxygen patterns · Yanbing Chen</title>
-  <meta name="description" content="Can the pattern of change in oxygen saturation tell us something about prognosis in patients with cirrhosis?">
-  <link rel="stylesheet" href="../style.css?v=project-pages-1">
+  <title>Multiscale oxygen saturation entropy in cirrhosis · Yanbing Chen</title>
+  <meta name="description" content="Investigated whether temporal patterns in oxygen saturation carried prognostic information in critically ill patients with cirrhosis.">
+  <link rel="stylesheet" href="../style.css?v=research-figures-1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="bar wrap"><a class="signature" href="../index.html#profile">Lectria Chen</a><a href="../index.html#research">← Research Projects</a></div></header>
   <main class="wrap detail" id="main">
     <p class="meta">UCL Network Physiology Lab</p>
-    <h1>Blood oxygen patterns</h1>
-    <p class="detail-lead">Can the pattern of change in oxygen saturation tell us something about prognosis in patients with cirrhosis?</p>
+    <h1>Multiscale oxygen saturation entropy in cirrhosis</h1>
+    <p class="detail-lead">Investigated whether temporal patterns in oxygen saturation carried prognostic information in critically ill patients with cirrhosis.</p>
     <div class="detail-layout">
       <div class="detail-story">
-        <section><h2>From recordings to entropy</h2><p>I used MATLAB to filter physiological time series, handle outliers and calculate entropy. The cirrhosis analysis included 20-minute oxygen saturation recordings from 200 patients.</p></section>
-        <section><h2>Assessing prognostic value</h2><p>I used regression and ROC analysis in SPSS and Stata to examine the relationship with prognosis. I also considered oxygen saturation alongside heart rate and respiration, and compared analyses across cirrhosis and sepsis cohorts.</p></section>
+        <figure class="project-result"><a href="../figures/entropy-scales.webp" aria-label="Open full-size project figure"><img src="../figures/entropy-scales.webp" alt="Patient-level oxygen saturation entropy across five time scales"></a><figcaption>Multiscale sample entropy from 20-minute recordings in 169 patients with cirrhosis. Each line represents one patient. The spread shows variation within the cohort; the plot does not display survival outcomes.</figcaption></figure>
+        <section><h2>Signal processing</h2><p>Developed MATLAB pipelines for filtering ICU recordings, handling outliers and calculating sample entropy. The project examined 20-minute recordings from 200 patients with cirrhosis; the figure shows the 169-patient analysis presented in the summer project.</p></section>
+        <section><h2>Statistical analysis</h2><p>Evaluated associations with prognosis using regression and ROC analysis in SPSS and Stata. Additional analyses considered heart rate and respiration alongside oxygen saturation and compared patterns in cirrhosis and sepsis cohorts.</p></section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>200 patients with cirrhosis</dd><dt>Research area</dt><dd>Physiological time-series analysis</dd></dl>
