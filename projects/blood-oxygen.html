@@ -20,10 +20,6 @@
           <p>I wrote a MATLAB workflow to extract oxygen saturation from each recording. For each patient, I calculated sample entropy, a measure of how irregular the signal is. I first used individual readings. I then averaged neighbouring readings in groups and repeated the calculation at progressively coarser scales.</p>
           <p>This gave each patient five entropy values. I used regression and ROC analysis in SPSS and Stata to study their relationship with patient outcomes. I also examined heart rate and respiration alongside oxygen saturation.</p>
         </section>
-        <section id="challenge">
-          <h2>Challenge</h2>
-          <p>The recordings used different names for the oxygen channel. Some files also used negative numbers to mark missing readings. Those values would look like sudden drops in oxygen if they entered the calculation. My code recognised the channel names and removed the missing-value codes before calculating entropy.</p>
-        </section>
         <section id="outcome">
           <h2>Outcome</h2>
           <p>The cirrhosis project covered 200 patients. The figure below shows five-scale profiles for 169 of them. Each line follows one patient, so the variation between patients is visible at every scale. I also compared the prognostic measures across the cirrhosis and sepsis cohorts.</p>

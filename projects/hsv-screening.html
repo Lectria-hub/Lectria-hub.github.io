@@ -20,10 +20,6 @@
           <p>I standardised the structures and removed duplicate records. I searched the library by chemical fragment, by the central scaffold of a molecule and by overall structural similarity.</p>
           <p>I trained five XGBoost models to score candidates using molecular fingerprints and chemical properties. For the shortlist, I also examined docking poses across six polymerase structures. This let me compare where each molecule was predicted to sit.</p>
         </section>
-        <section id="challenge">
-          <h2>Challenge</h2>
-          <p>Only 100 compounds could go into the submission. Several close relatives of the same molecule could score well and use up places. I checked the central scaffolds for repeats. I weighed the docking results alongside predicted solubility and ligand efficiency when choosing which compounds to keep.</p>
-        </section>
         <section id="outcome">
           <h2>Outcome</h2>
           <p>The final submission contained 100 compounds drawn from a shortlist of 1,600. The figure below shows the first three entries. Their order reflects the computational ranking.</p>
