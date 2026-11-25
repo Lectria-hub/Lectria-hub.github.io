@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Metal–protein complex curation for AtomFlow · Yanbing Chen</title>
   <meta name="description" content="Prepared seven metal-containing protein complexes for the Crick Data Challenge team’s AtomFlow project.">
-  <link rel="stylesheet" href="../style.css?v=project-titles-2">
+  <link rel="stylesheet" href="../style.css?v=project-story-3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -12,17 +12,22 @@
   <main class="wrap detail" id="main">
     <p class="meta">Crick Data Challenge</p>
     <h1>Metal–protein complex curation for AtomFlow</h1>
-    <p class="detail-lead">Prepared seven metal-containing protein complexes for the Crick Data Challenge team’s AtomFlow project.</p>
+    <p class="detail-lead">Prepared seven metal-containing protein structures for the AtomFlow team at the Crick Data Challenge.</p>
     <div class="detail-layout">
       <div class="detail-story">
-        <figure class="project-result"><a href="../figures/haem-site.webp" aria-label="Open full-size project figure"><img src="../figures/haem-site.webp" alt="Haem cofactor and central iron in PDB 1CYO"></a><figcaption>Haem site from PDB 1CYO, one of the seven curated complexes. Gold sticks trace the cofactor around its central iron, shown as a sphere.</figcaption></figure>
-        <section>
-          <h2>Preparing the seven complexes</h2>
-          <p>For each complex, I started with the atomic coordinates in the Protein Data Bank. I matched each ligand to its Chemical Component Dictionary entry and recorded which atoms coordinated the metal. In the haem structure shown above, this meant keeping track of both the cofactor and its central iron atom.</p>
+        <section id="workflow">
+          <h2>Workflow</h2>
+          <p>I started with the experimental coordinates in the Protein Data Bank. For each complex, I matched the ligand in the structure to its entry in the Chemical Component Dictionary. I recorded which atoms surrounded the metal and which belonged to the ligand.</p>
+          <p>The haem complex shown below is one example. The structure gives the position of the iron and its neighbours. The dictionary gives a separate record of the cofactor’s chemistry. I used both when preparing the structure file.</p>
         </section>
-        <section>
-          <h2>Correcting ligand charges</h2>
-          <p>A structure can look right on screen even when a ligand carries the wrong charge in the file. I checked the charge annotations against the dictionary and corrected the errors while keeping the deposited coordinates intact. I then ran the preparation twice and compared the outputs. Both runs produced identical structure files for all seven complexes.</p>
+        <figure class="project-result"><a href="../figures/haem-site.webp" aria-label="Open full-size project figure"><img src="../figures/haem-site.webp" alt="Haem cofactor and central iron in PDB 1CYO"></a><figcaption>Haem site from PDB 1CYO, one of the seven curated complexes. Gold sticks trace the cofactor around its central iron, shown as a sphere.</figcaption></figure>
+        <section id="challenge">
+          <h2>Challenge</h2>
+          <p>A ligand can carry the wrong charge in a file even when its atoms look correctly placed on screen. I checked the ligand charges against the dictionary and corrected the entries that were wrong. The original atomic coordinates stayed intact.</p>
+        </section>
+        <section id="outcome">
+          <h2>Outcome</h2>
+          <p>I ran the full preparation twice and compared the output files. Both runs produced identical files for all seven complexes. The team had a curated set of structures and a record of the atoms that coordinated each metal.</p>
         </section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">

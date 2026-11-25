@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Multiscale oxygen saturation entropy in cirrhosis · Yanbing Chen</title>
   <meta name="description" content="Investigated whether temporal patterns in oxygen saturation carried prognostic information in critically ill patients with cirrhosis.">
-  <link rel="stylesheet" href="../style.css?v=project-titles-2">
+  <link rel="stylesheet" href="../style.css?v=project-story-3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -12,19 +12,23 @@
   <main class="wrap detail" id="main">
     <p class="meta">UCL Network Physiology Lab</p>
     <h1>Multiscale oxygen saturation entropy in cirrhosis</h1>
-    <p class="detail-lead">Investigated whether temporal patterns in oxygen saturation carried prognostic information in critically ill patients with cirrhosis.</p>
+    <p class="detail-lead">Studied 20-minute oxygen saturation recordings from ICU patients with cirrhosis. The aim was to see whether patterns in the signal carried information about prognosis.</p>
     <div class="detail-layout">
       <div class="detail-story">
+        <section id="workflow">
+          <h2>Workflow</h2>
+          <p>I wrote a MATLAB workflow to extract oxygen saturation from each recording. For each patient, I calculated sample entropy, a measure of how irregular the signal is. I first used individual readings. I then averaged neighbouring readings in groups and repeated the calculation at progressively coarser scales.</p>
+          <p>This gave each patient five entropy values. I used regression and ROC analysis in SPSS and Stata to study their relationship with patient outcomes. I also examined heart rate and respiration alongside oxygen saturation.</p>
+        </section>
+        <section id="challenge">
+          <h2>Challenge</h2>
+          <p>The recordings used different names for the oxygen channel. Some files also used negative numbers to mark missing readings. Those values would look like sudden drops in oxygen if they entered the calculation. My code recognised the channel names and removed the missing-value codes before calculating entropy.</p>
+        </section>
+        <section id="outcome">
+          <h2>Outcome</h2>
+          <p>The cirrhosis project covered 200 patients. The figure below shows five-scale profiles for 169 of them. Each line follows one patient, so the variation between patients is visible at every scale. I also compared the prognostic measures across the cirrhosis and sepsis cohorts.</p>
+        </section>
         <figure class="project-result"><a href="../figures/entropy-scales.webp?v=white" aria-label="Open full-size project figure"><img src="../figures/entropy-scales.webp?v=white" alt="Patient-level oxygen saturation entropy across five time scales"></a><figcaption>Multiscale sample entropy from 20-minute recordings in 169 patients with cirrhosis. Each line represents one patient.</figcaption></figure>
-        <section>
-          <h2>Making ICU recordings comparable</h2>
-          <p>The project examined 20-minute oxygen saturation recordings from 200 patients with cirrhosis. The files used different names for the oxygen channel, and some stored missing readings as negative numbers. I wrote MATLAB code to find the channel and remove those values. A missing reading could otherwise look like a sudden drop in oxygen saturation.</p>
-        </section>
-        <section>
-          <h2>From a recording to a patient-level measure</h2>
-          <p>For each recording, I calculated sample entropy at five time scales. At the first scale I used individual readings. At coarser scales I averaged neighbouring readings before calculating entropy. This gave each patient a profile of how signal irregularity changed with scale. The figure shows the profiles for 169 patients.</p>
-          <p>I then used regression and ROC analysis in SPSS and Stata to examine whether the entropy measures helped distinguish patients with different outcomes. I also examined heart rate and respiration alongside oxygen saturation and compared results across the cirrhosis and sepsis cohorts.</p>
-        </section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>200 patients with cirrhosis</dd><dt>Research area</dt><dd>Physiological time-series analysis</dd></dl>

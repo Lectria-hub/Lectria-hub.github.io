@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Virtual screening for HSV-1 DNA polymerase inhibitors · Yanbing Chen</title>
   <meta name="description" content="Screened small molecules for the Shanghai International Computational Biology Challenge and assembled a chemically diverse shortlist of putative HSV-1 DNA polymerase inhibitors.">
-  <link rel="stylesheet" href="../style.css?v=project-titles-2">
+  <link rel="stylesheet" href="../style.css?v=project-story-3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -12,18 +12,23 @@
   <main class="wrap detail" id="main">
     <p class="meta">Virtual screening</p>
     <h1>Virtual screening for HSV&#8209;1 DNA polymerase inhibitors</h1>
-    <p class="detail-lead">Screened small molecules for the Shanghai International Computational Biology Challenge and assembled a chemically diverse shortlist of putative HSV-1 DNA polymerase inhibitors.</p>
+    <p class="detail-lead">Selected 100 compounds for a virtual screening challenge targeting HSV-1 DNA polymerase. The search began with about nine million compound records.</p>
     <div class="detail-layout">
       <div class="detail-story">
-        <figure class="project-result"><a href="../figures/screening-hits.webp" aria-label="Open full-size project figure"><img src="../figures/screening-hits.webp" alt="Structures of the top three compounds in the submitted shortlist"></a><figcaption>The first three molecules in the final 100-compound submission, drawn from the submitted SMILES. Rank reflects computational selection; inhibitory activity was not measured in this screen.</figcaption></figure>
-        <section>
-          <h2>Searching nine million compound records</h2>
-          <p>I built a workflow to search about nine million compound records. The first step was to standardise the structures and remove duplicates. I then searched for compounds that shared a chemical fragment, a central scaffold or a similar molecular fingerprint. I trained five XGBoost models to score candidates using fingerprints and molecular properties.</p>
+        <section id="workflow">
+          <h2>Workflow</h2>
+          <p>I standardised the structures and removed duplicate records. I searched the library by chemical fragment, by the central scaffold of a molecule and by overall structural similarity.</p>
+          <p>I trained five XGBoost models to score candidates using molecular fingerprints and chemical properties. For the shortlist, I also examined docking poses across six polymerase structures. This let me compare where each molecule was predicted to sit.</p>
         </section>
-        <section>
-          <h2>Choosing 100 compounds for submission</h2>
-          <p>A shortlist can fill up with close relatives of the same molecule. With only 100 places, scaffold diversity mattered alongside the model scores. I reviewed 1,600 candidates, comparing predicted docking poses across six polymerase structures. To make the final cut, I weighed the docking results alongside solubility and ligand efficiency. I also checked for repeated scaffolds so the 100 submissions covered a wider range of chemical structures.</p>
+        <section id="challenge">
+          <h2>Challenge</h2>
+          <p>Only 100 compounds could go into the submission. Several close relatives of the same molecule could score well and use up places. I checked the central scaffolds for repeats. I weighed the docking results alongside predicted solubility and ligand efficiency when choosing which compounds to keep.</p>
         </section>
+        <section id="outcome">
+          <h2>Outcome</h2>
+          <p>The final submission contained 100 compounds drawn from a shortlist of 1,600. The figure below shows the first three entries. Their order reflects the computational ranking.</p>
+        </section>
+        <figure class="project-result"><a href="../figures/screening-hits.webp" aria-label="Open full-size project figure"><img src="../figures/screening-hits.webp" alt="Structures of the top three compounds in the submitted shortlist"></a><figcaption>Chemical structures drawn from the SMILES records for the first three compounds submitted.</figcaption></figure>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>100 submitted candidates</dd><dt>Research area</dt><dd>Small-molecule screening</dd></dl>

@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Structure-guided nanobody design for NK2R · Yanbing Chen</title>
   <meta name="description" content="Designed NK2R nanobody candidates and assessed how consistently structure prediction models placed them on the receptor.">
-  <link rel="stylesheet" href="../style.css?v=project-titles-2">
+  <link rel="stylesheet" href="../style.css?v=project-story-3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -12,22 +12,27 @@
   <main class="wrap detail" id="main">
     <p class="meta">Protein design</p>
     <h1>Structure-guided nanobody <span class="title-line">design for NK2R</span></h1>
-    <p class="detail-lead">Designed NK2R nanobody candidates and assessed how consistently structure prediction models placed them on the receptor.</p>
+    <p class="detail-lead">I design nanobodies for NK2R, a receptor on the cell surface. The question was which designs to take forward for experimental testing.</p>
     <div class="detail-layout">
       <div class="detail-story">
+        <section id="workflow">
+          <h2>Workflow</h2>
+          <p>My starting point was M2, a nanobody I designed for NK2R. Our team made variants by changing the loops that face the receptor. For each candidate, I compared models of the nanobody and NK2R together.</p>
+          <p>I aligned the models on the receptor. This gave them a common frame of reference. I could then see where each model placed the nanobody and which parts of NK2R its loops could reach.</p>
+        </section>
         <figure class="project-result"><a href="../figures/nk2r-design.webp" aria-label="Open full-size project figure"><img src="../figures/nk2r-design.webp" alt="Predicted NK2R–nanobody complex"></a><figcaption>AlphaFold 3 model of design R27_09 (seed 1901). The designed nanobody is shown in plum and NK2R in blue-grey. The view shows the two proteins at the predicted interface.</figcaption></figure>
-        <section>
-          <h2>Comparing nanobody designs</h2>
-          <p>Starting from my M2 nanobody design, our team explored changes to the loops that contact NK2R. To compare them, I aligned the models on NK2R. This put the receptor in the same position in every view and made it easier to see where each nanobody sat.</p>
+        <section id="challenge">
+          <h2>Challenge</h2>
+          <p>Two models can predict the same binding site yet point the nanobody in different directions. In that case, agreement on the site tells only part of the story. I compared the predicted contacts and checked whether sugars on the receptor might block access. I also looked for changes in the pose across different G-protein configurations.</p>
+        </section>
+        <section id="outcome">
+          <h2>Outcome</h2>
+          <p>All of our NK2R candidates shortlisted for experimental testing came from the M2 design. The figure below shows the parent nanobody from which the team developed those variants.</p>
         </section>
         <figure class="project-result" id="m2-parent">
           <a href="../figures/nk2r-m2-parent.png" aria-label="Open the full-size M2 parent design figure"><img src="../figures/nk2r-m2-parent.png" alt="Predicted M2 nanobody pose in blue against NK2R in grey, with the CDR3 loop highlighted in orange."></a>
-          <figcaption>I designed M2 as a parent nanobody for NK2R. All of our candidates shortlisted for experimental testing were optimised variants of M2.</figcaption>
+          <figcaption>Predicted position of M2 relative to NK2R and the membrane. The orange trace marks the CDR3 loop.</figcaption>
         </figure>
-        <section>
-          <h2>What to do when models disagree</h2>
-          <p>Two models can place the same nanobody near the same site but turn it in different directions. That changes which parts of the receptor the loops can reach. I compared the predicted contacts and checked whether sugars on the receptor could obstruct the site. I also checked whether the pose changed across models with different G-protein configurations. These comparisons guided the choice of designs for testing.</p>
-        </section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>Nanobody candidates</dd><dt>Research area</dt><dd>Predicted receptor interfaces</dd></dl>
