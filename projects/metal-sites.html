@@ -16,8 +16,14 @@
     <div class="detail-layout">
       <div class="detail-story">
         <figure class="project-result"><a href="../figures/haem-site.webp" aria-label="Open full-size project figure"><img src="../figures/haem-site.webp" alt="Haem cofactor and central iron in PDB 1CYO"></a><figcaption>Haem site from PDB 1CYO, one of the seven curated complexes. Gold sticks trace the cofactor around its central iron, shown as a sphere.</figcaption></figure>
-        <section><h2>Structure preparation</h2><p>Matched Protein Data Bank coordinates to Chemical Component Dictionary entries, checked ligand annotations and documented metal-coordinating atoms. Preserved the deposited coordinates during preparation.</p></section>
-        <section><h2>Reproducibility check</h2><p>Corrected charge-related annotation errors and repeated the preparation workflow. Two independent runs produced identical structure files for all seven complexes.</p></section>
+        <section>
+          <h2>Preparing the seven complexes</h2>
+          <p>For each complex, I started with the atomic coordinates in the Protein Data Bank. I matched each ligand to its Chemical Component Dictionary entry and recorded which atoms coordinated the metal. In the haem structure shown above, this meant keeping track of both the cofactor and its central iron atom.</p>
+        </section>
+        <section>
+          <h2>Correcting ligand charges</h2>
+          <p>A structure can look right on screen even when a ligand carries the wrong charge in the file. I checked the charge annotations against the dictionary and corrected the errors while keeping the deposited coordinates intact. I then ran the preparation twice and compared the outputs. Both runs produced identical structure files for all seven complexes.</p>
+        </section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>7 protein complexes</dd><dt>Research area</dt><dd>Structure curation and quality control</dd></dl>

@@ -16,8 +16,14 @@
     <div class="detail-layout">
       <div class="detail-story">
         <figure class="project-result"><a href="../figures/screening-hits.webp" aria-label="Open full-size project figure"><img src="../figures/screening-hits.webp" alt="Structures of the top three compounds in the submitted shortlist"></a><figcaption>The first three molecules in the final 100-compound submission, drawn from the submitted SMILES. Rank reflects computational selection; inhibitory activity was not measured in this screen.</figcaption></figure>
-        <section><h2>Library screening</h2><p>Standardised compound structures and removed duplicates. Substructure searches, molecular fingerprints and scaffold comparisons identified candidates for scoring with five XGBoost models.</p></section>
-        <section><h2>Candidate selection</h2><p>Compared docking poses across six polymerase structures. Ligand efficiency, solubility and scaffold diversity informed the final selection of 100 compounds from a shortlist of 1,600.</p></section>
+        <section>
+          <h2>Searching nine million compound records</h2>
+          <p>I built a workflow to search about nine million compound records. The first step was to standardise the structures and remove duplicates. I then searched for compounds that shared a chemical fragment, a central scaffold or a similar molecular fingerprint. I trained five XGBoost models to score candidates using fingerprints and molecular properties.</p>
+        </section>
+        <section>
+          <h2>Choosing 100 compounds for submission</h2>
+          <p>A shortlist can fill up with close relatives of the same molecule. With only 100 places, scaffold diversity mattered alongside the model scores. I reviewed 1,600 candidates, comparing predicted docking poses across six polymerase structures. To make the final cut, I weighed the docking results alongside solubility and ligand efficiency. I also checked for repeated scaffolds so the 100 submissions covered a wider range of chemical structures.</p>
+        </section>
       </div>
       <aside class="detail-aside" aria-label="Project summary">
         <dl><dt>Project scope</dt><dd>100 submitted candidates</dd><dt>Research area</dt><dd>Small-molecule screening</dd></dl>
